@@ -1,8 +1,6 @@
 # profitwell-component
 
-[![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
 
 Simple react component to track by profitwell.
 
