@@ -7,7 +7,7 @@ class Demo extends Component {
   render() {
     return <div>
       <h1>profitwell Demo</h1>
-      <Example/>
+      <Example authToken="YOUR_TOKEN" />
     </div>
   }
 }

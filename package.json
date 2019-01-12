@@ -1,7 +1,7 @@
 {
-  "name": "profitwell",
-  "version": "1.0.0",
-  "description": "profitwell React component",
+  "name": "profitwell-component",
+  "version": "0.1.0",
+  "description": "Simple react component to track by profitwell",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -28,9 +28,16 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   },
-  "author": "",
-  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hideokamoto/profitwell-component.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hideokamoto/profitwell-component/issues"
+  },
+  "author": "Hidetaka Okamoto <info@wp-kyoto.net> (https://wp-kyoto.net)",
   "license": "MIT",
+  "homepage": "https://github.com/hideokamoto/profitwell-component",
   "repository": "",
   "keywords": [
     "react-component"
