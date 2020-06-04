@@ -24,9 +24,9 @@
     "react": "16.x"
   },
   "devDependencies": {
-    "nwb": "0.23.x",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "nwb": "0.23.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
   },
   "repository": {
     "type": "git",
