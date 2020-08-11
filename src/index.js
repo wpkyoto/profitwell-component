@@ -10,7 +10,7 @@ class Profitwell extends React.Component {
     if (!profitwell || hasInit) return;
     const { email } = this.props;
     if (email) {
-      profitwell('user_email', email);
+      profitwell('start', { 'user_email': email });
       this.setState({
         hasInit: true
       })
@@ -25,27 +25,27 @@ class Profitwell extends React.Component {
     }
     // Beginning of Profitwell Awesomeness Code (which loads totally asynchronously)
     /* eslint-disable */
-    (function(i, s, o, g, r, a, m) {
-      i.ProfitWellObject = r;
-      (i[r] =
-        i[r] ||
-        function() {
-          (i[r].q = i[r].q || []).push(arguments);
-        }),
-        (i[r].l = 1 * new Date());
-      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m);
-    })(
-      window,
-      document,
-      'script',
-      'https://dna8twue3dlxq.cloudfront.net/js/profitwell.js',
-      'profitwell',
-    );
+      (function (i, s, o, g, r, a, m, n) {
+            n = s.createElement("script");
+            n.setAttribute("id", "profitwell-js");
+            n.setAttribute("data-pw-auth", authToken);
+    
+            i[o] = i[o] || function () { (i[o].q = i[o].q || []).push(arguments) };
+                a = s.createElement(g); m = s.getElementsByTagName(g)[0]; 
+                m.parentNode.insertBefore(n, m);
+                
+                a.async = 1; a.src = r + '?auth=' +
+                s.getElementById(o + '-js').getAttribute('data-pw-auth'); 
+                m.parentNode.insertBefore(a, m);
+        })
+            (
+                window,
+                document,
+                'profitwell',
+                'script',
+                'https://public.profitwell.com/js/profitwell.js',
+            );    
     /* eslint-enable */
-    if (window.profitwell) window.profitwell('auth_token', authToken)
   }
   render() {
     return null;
